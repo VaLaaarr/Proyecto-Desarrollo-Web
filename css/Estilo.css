@@ -1,0 +1,281 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+header{
+    background-image: linear-gradient(rgb(10, 129, 171),rgb(12, 66, 113),rgb(0, 0, 0));
+}
+main{
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
+}
+body {
+    
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+}main {
+	flex: 1;
+}
+
+
+
+footer{
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
+    clear: both;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px;
+    
+}
+h1{
+    font-family: 'Press Start 2P', cursive;
+    color:rgb(0, 187, 255);
+    margin-bottom: 5px;
+}
+
+h2{
+    color:rgb(0, 187, 255);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-size: 54px;
+
+}
+div article div{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+#divFloatLeft{
+    float: left;
+}
+#imgLogo{
+    width: 200px;
+    height: 200px;
+    border: 0px
+}
+.header{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    bottom: 40px;
+}
+.imgIndex{
+    border: 1px solid white;
+    width: 50%;
+    height: 50%;
+}
+
+@media only screen and (min-width: 120px), (min-width: 375px), (min-width: 768px){
+    img{
+        width: 30%;
+        height: 30%;
+    } 
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    h2{
+        font-size: 54px;
+    }
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+   
+    
+}
+table{
+    border-spacing: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+th{
+    color: cyan;
+    font-size: 25px;
+}
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+ul{
+   
+    font-family: 'Roboto', sans-serif;
+}
+fieldset{
+    border-color:white;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.compra{
+    color: white;
+}
+input{
+    color: white;
+}
+ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+ }
+ li {
+    display: inline-block;
+    width: 25%;
+    position:relative;
+    font-size: 14px
+ }
+ ul ul {
+    position: absolute;
+    display: none;
+ }
+ ul ul li {
+    display: block;
+ }
+ ul li:hover ul {
+    display:block;
+ }
+ .lanzamientosFlexbox{
+     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+ }
+.oferta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imagenesCatalogo{
+    width: 350px;
+    height: 350px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+#grilla{
+    display: grid;
+   height: 100%;
+   width: 100%;
+    grid-template-columns: 350px 350px 350px 350px ;
+    grid-template-rows: 350px 350px 350px 350px ;
+    grid-template-areas: "area1 area2 area3 area4"
+                         "area5 area6 area7 area8 "
+                         "area9 area10 area11 area12"
+                         "area13 area14 area15 area16";
+display:inline-grid;
+justify-content: space-around;
+grid-gap: 30px;
+}
+#area1{
+    grid-area:area1;
+    width: 350px;
+    height: 350px;
+}
+#area2{
+    grid-area:area2;
+    width: 350px;
+    height: 350px;
+}
+#area3{
+    grid-area:area3;
+    width: 350px;
+    height: 350px;
+}
+#area4{
+    grid-area:area4;
+    width: 350px;
+    height: 350px;
+}
+#area5{
+    grid-area:area5;
+    width: 350px;
+    height: 350px;
+}
+#area6{
+    grid-area:area6;
+    width: 350px;
+    height: 350px;
+}
+#area7{
+    grid-area:area7;
+    width: 350px;
+    height: 350px;
+}
+#area8{
+    grid-area:area8;
+    width: 350px;
+    height: 350px;
+}
+#area9{
+    grid-area:area9;
+    width: 350px;
+    height: 350px;
+}
+#area10{
+    grid-area:area10;
+    width: 350px;
+    height: 350px;
+}
+#area11{
+    grid-area:area11;
+    width: 350px;
+    height: 350px;
+}
+#area12{
+    grid-area:area12;
+    width: 350px;
+    height: 350px;
+}
+#area13{
+    grid-area:area13;
+    width: 350px;
+    height: 350px;
+}
+#area14{
+    grid-area:area14;
+    width: 350px;
+    height: 350px;
+}
+#area15{
+    grid-area:area15;
+    width: 350px;
+    height: 350px;
+}
+#area16{
+    grid-area:area16;
+    width: 350px;
+    height: 350px;
+}
+#gridNosotros{
+    display: grid;
+    height: 100%;
+    width: 100%;
+     grid-template-columns: 550px 550px ;
+     grid-template-rows: 550px ;
+     grid-template-areas: "areaImg areaTexto";
+     
+}
+#areaImg{
+    grid-area: areaImg;
+    width: 350px;
+    height: 350px;
+}
+#areaTexto{
+grid-area: areaTexto;
+align-content: center;
+}
+.imgScale:hover{
+    transform: scale(1.5,1.5);
+    transition: all 500ms;
+
+}
