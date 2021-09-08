@@ -1,66 +1,128 @@
+$red: #FF0000;
+$blue: #0c0050;
+$fontSize:50;
+
 *{
-margin: 0;
-padding: 0;
-
-}
-header{
-    background-image: linear-gradient(rgb(10, 129, 171),rgb(12, 66, 113),rgb(0, 0, 0));
-}
-main{
-    background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
-}
-body {
-    
-	min-height: 100vh;
-	height: 100%;
-	display: flex;
-		flex-flow: column nowrap;
-		justify-content: space-between;
-}main {
-	flex: 1;
-}
-
-
-
-footer{
-    background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
-    clear: both;
-}
-nav ul li{
-    display: inline-block;
-    margin: 10px;
+    margin: 0;
+    padding: 0;
     
 }
-h1{
-    font-family: 'Press Start 2P', cursive;
-    color:rgb(0, 187, 255);
-    margin-bottom: 5px;
-}
+    header{
+        background-image: linear-gradient(rgb(10, 129, 171),rgb(12, 66, 113),rgb(0, 0, 0));
+    }
+    main{
+        background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
+    }
+    body {
+        
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+    }main {
+        flex: 1;
+    }
+    
+    
+    
+    footer{
+        background-image: linear-gradient(rgb(0, 0, 0),rgb(12, 66, 113),rgb(10, 129, 171));
+        clear: both;
+    }
+    .header{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        bottom: 40px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-h2{
-    color:rgb(0, 187, 255);
+
+
+
+
+
+        &__item{
+            font-family: 'Roboto', sans-serif;
+            
+           
+
+
+        }
+    }
+    .oferta{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
     font-size: 54px;
+    }
+    .titulo{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    #imgLogo{
+        width: 200px;
+        height: 200px;
+        border: 0px
+    }
+    h1{
+        font-family: 'Press Start 2P', cursive;
+        color:rgb(0, 187, 255);
+        margin-bottom: 5px;
+    }
+    .navegador{ 
+        
+
+
+
+        &__lista{display: flex;
+            justify-content: center;
+
+            justify-content: space-evenly;
+            list-style: none;
+
+
+
+        }
+
+        &__item{
+
+            font-family: 'Roboto', sans-serif;
+            font-size: ($fontSize)-30;
+            color: white;
+        display: inline-block;
+
+        }
+
 
 }
-div article div{
-    margin-top: 10px;
-    margin-bottom: 50px;
+a{
+    text-decoration: none;
 }
-#divFloatLeft{
-    float: left;
+a:visited{
+    text-decoration: none;
+    color: white;
 }
-#imgLogo{
-    width: 200px;
-    height: 200px;
-    border: 0px
-}
-.header{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    bottom: 40px;
+.formulario{
+
+    &__opcion{
+
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+    &__select{
+        color: black;
+    }
+
 }
 .imgIndex{
     border: 1px solid white;
@@ -74,13 +136,17 @@ div article div{
         height: 30%;
     } 
     h2{
-        font-size: 24px;
+        font-size: ($fontSize)-26;
+        color: $red;
+        box-shadow: 4px 4px 4px 5px rgba(241, 241, 241, 0.911)
     }
 }
 
 @media only screen and (min-width: 768px){
     h2{
-        font-size: 54px;
+        font-size: $fontSize+4;
+        color: $blue;
+        box-shadow: 2px 2px 2px 1px rgba(241, 241, 241, 0.911)
     }
 }
 
@@ -91,63 +157,13 @@ p{
    
     
 }
-table{
-    border-spacing: 45px;
-    font-family: 'Roboto', sans-serif;
-}
-th{
-    color: cyan;
-    font-size: 25px;
-}
-a:visited{
-    text-decoration: none;
-    color: white;
-}
-a{
-    text-decoration: none;
-}
-ul{
-   
-    font-family: 'Roboto', sans-serif;
-}
-fieldset{
-    border-color:white;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-}
+
 .compra{
     color: white;
 }
 input{
     color: white;
-}
-ul {
-    list-style: none;
-    font-size:0 /* truco por el uso de inline-block*/
- }
- li {
-    display: inline-block;
-    width: 25%;
-    position:relative;
-    font-size: 14px
- }
- ul ul {
-    position: absolute;
-    display: none;
- }
- ul ul li {
-    display: block;
- }
- ul li:hover ul {
-    display:block;
- }
- .lanzamientosFlexbox{
-     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly
- }
-.oferta{
+}.oferta{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -273,9 +289,15 @@ grid-gap: 30px;
 #areaTexto{
 grid-area: areaTexto;
 align-content: center;
+
 }
 .imgScale:hover{
     transform: scale(1.5,1.5);
     transition: all 500ms;
 
+}
+.lanzamientosFlexbox{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-evenly
 }
